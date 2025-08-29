@@ -38,21 +38,21 @@ export default function Nav() {
                         }} className={`${leftNav ? 'hidden' : ''} relative text-red-500`}/>
                         <div className={`${leftNav ? "" : "hidden"} rounded-xl absolute bg-gray-100 p-3`}>
                             <div className={`my-2`}>
-                                <div><Link href={`/`}>Home</Link></div>
+                                <div className={`text-xl`}><Link href={`/`}>Home</Link></div>
                             </div>
                             <div className={`my-2`}>
                                 <div>
                                     <div onClick={() => {
                                         setSalNav(!salNav);
                                     }} className="flex items-center justify-start gap-2">
-                                        <div className={`hover:cursor-pointer`}>Sales</div>
+                                        <div className={`hover:cursor-pointer text-xl`}>Sales</div>
                                         <div><ArrowRight
                                             className={`${salNav ? 'rotate-90 animate-pulse text-red-500' : ''} duration-500`}
                                             size={15}/></div>
                                     </div>
                                     <div className={`${salNav ? '' : 'hidden'}`}>
                                         {childSal.map((item, index) => (
-                                            <div key={index} className={`mx-2 text-gray-500 italic`}><Link
+                                            <div key={index} className={`mx-2 my-3 text-gray-500 italic`}><Link
                                                 href={item.lk}>{item.name}</Link>
                                             </div>
                                         ))}
@@ -64,14 +64,14 @@ export default function Nav() {
                                     <div onClick={() => {
                                         setScmNav(!scmNav);
                                     }} className="flex items-center justify-start gap-2">
-                                        <div className={`hover:cursor-pointer`}>Scm</div>
+                                        <div className={`hover:cursor-pointer text-xl`}>Logistic</div>
                                         <div><ArrowRight
                                             className={`${scmNav ? 'rotate-90 animate-pulse text-red-500' : ''} duration-500`}
                                             size={15}/></div>
                                     </div>
                                     <div className={`${scmNav ? '' : 'hidden'}`}>
                                         {childSCM.map((item, index) => (
-                                            <div key={index} className={`mx-2 text-gray-500 italic`}><Link
+                                            <div key={index} className={`mx-2 my-3 text-gray-500 italic`}><Link
                                                 href={item.lk}>{item.name}</Link>
                                             </div>
                                         ))}
@@ -108,11 +108,11 @@ export default function Nav() {
                                             className={`relative duration-500  text-red-500 ${rightNav ? 'rotate-90 ' : ''} `}/>
                         <div
                             className={`${rightNav ? "" : "hidden"} rounded-xl right-2 md:right-auto absolute bg-gray-100 p-3`}>
-                            <div className={`my-2`}>
-                                <Link href={`/profile`}>Profile</Link>
+                            <div className={`my-2 mx-4`}>
+                                <Link href={`/profile`} className={`text-xl`}>Profile</Link>
                             </div>
-                            <div className={`my-2`}>
-                                <Link href={`/logout`}>Logout</Link>
+                            <div className={`my-2 mx-4`}>
+                                <Link href={`/logout`} className={`text-xl`}>Logout</Link>
                             </div>
 
                         </div>
